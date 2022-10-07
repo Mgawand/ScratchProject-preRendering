@@ -4,7 +4,10 @@ import AddressIcon from '../icons/address-icon';
 import RightArrowIcon from '../icons/arrow-right.-icon';
 import DateIcon from '../icons/date-icon';
 import Button from '../ui/button';
-import classes from './event-item.module.css';
+import classes from './event-listItem.module.css';
+import Image from 'next/image';
+
+
 const EventItem = (props) => {
     const {title, image, date, location, id } = props;
 
@@ -20,7 +23,7 @@ const EventItem = (props) => {
   return (
     <div>
       <li className={classes.item}>
-        <img src={'/' + image} alt={title} />
+        <Image src={'/' + image} alt={title} width={250} height={200} />
         <div className={classes.content}>
             <div className={classes.summary}>
                <h2>{title}</h2> 
